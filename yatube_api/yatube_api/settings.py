@@ -119,5 +119,4 @@ REST_FRAMEWORK = {
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
     'AUTH_HEADER_TYPES': ('Bearer',),
-}
-# ← УБЕРИ пустую строку в конце (или оставь одну, но не две)
+}# ← УБЕРИ пустую строку в конце (или оставь одну, но не две)
