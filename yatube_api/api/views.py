@@ -6,7 +6,7 @@ from .permissions import IsAuthorOrReadOnly
 
 
 class PostViewSet(viewsets.ModelViewSet):
-    queryset = Post.objects.all()
+    queryset = Post.objects.all().order_by('-pub_date')
     serializer_class = PostSerializer
     permission_classes = (IsAuthorOrReadOnly,)
 
@@ -15,7 +15,7 @@ class PostViewSet(viewsets.ModelViewSet):
 
 
 class GroupViewSet(viewsets.ReadOnlyModelViewSet):
-    queryset = Group.objects.all()
+    queryset = Group.objects.all().order_by('id')
     serializer_class = GroupSerializer
     permission_classes = ()
 
@@ -27,7 +27,7 @@ class CommentViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         post_id = self.kwargs.get('post_id')
         post = get_object_or_404(Post, id=post_id)
-        return Comment.objects.filter(post=post)
+        return Comment.objects.filter(post=post).order_by('-created')
 
     def perform_create(self, serializer):
         post_id = self.kwargs.get('post_id')
