@@ -8,7 +8,9 @@ router.register('posts', views.PostViewSet, basename='posts')
 router.register('groups', views.GroupViewSet, basename='groups')
 
 urlpatterns = [
-    path('api-token-auth/', auth_views.obtain_auth_token, name='api_token_auth'),
+        path('api-token-auth/',
+         auth_views.obtain_auth_token,
+         name='api_token_auth'),
     path('', include(router.urls)),
 
     path('posts/<int:post_id>/comments/',
