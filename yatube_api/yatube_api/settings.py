@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+from datetime import timedelta
 # ← ДОБАВИТЬ этот импорт
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
