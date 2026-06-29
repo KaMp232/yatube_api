@@ -7,8 +7,8 @@ class IsAuthorOrReadOnly(permissions.BasePermission):
     остальным только чтение.
     """
     def has_permission(self, request, view):
-        # Разрешаем GET-запросы всем аутентифицированным
-        return request.user.is_authenticated
+        # Проверяем, что пользователь аутентифицирован
+        return request.user and request.user.is_authenticated
 
     def has_object_permission(self, request, view, obj):
         # Чтение разрешено всем аутентифицированным
