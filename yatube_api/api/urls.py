@@ -1,4 +1,4 @@
-from django.urls import include
+from django.urls import include, path  # ← ДОБАВИТЬ path
 from rest_framework.routers import DefaultRouter
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
@@ -37,3 +37,4 @@ urlpatterns += [
         name='comment-detail'
     ),
 ]
+# ← УБЕРИ пустую строку в конце
