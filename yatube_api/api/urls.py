@@ -37,4 +37,3 @@ urlpatterns += [
         name='comment-detail'
     ),
 ]
-# ← УБЕРИ пустую строку в конце
