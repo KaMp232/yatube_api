@@ -15,4 +15,7 @@ if settings.DEBUG:
     urlpatterns += static(
         settings.STATIC_URL, document_root=settings.STATIC_ROOT
     )
+<<<<<<< HEAD
     
+=======
+>>>>>>> 89be0c5 (fix api and models)

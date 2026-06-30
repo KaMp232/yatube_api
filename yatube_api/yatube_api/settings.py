@@ -25,7 +25,7 @@ INSTALLED_APPS = [
     # Сторонние приложения
     'rest_framework',
     'rest_framework_simplejwt',
-    'django_filters',
+    # 'django_filters',
     # Локальные приложения
     'posts.apps.PostsConfig',
     'api.apps.ApiConfig',
@@ -72,16 +72,20 @@ DATABASES = {
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.
+'UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': 'django.contrib.auth.password_validation.
+'MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.
+'CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.
+'NumericPasswordValidator',
     },
 ]
 
@@ -119,4 +123,8 @@ REST_FRAMEWORK = {
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
     'AUTH_HEADER_TYPES': ('Bearer',),
+<<<<<<< HEAD
 }
+=======
+}  # ← УБЕРИ пустую строку в конце (или оставь одну, но не две)
+>>>>>>> 89be0c5 (fix api and models)
